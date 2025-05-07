@@ -1,0 +1,36 @@
+Tabuada javaScript
+function tabuada(){
+    //Declarando variaveis
+    let valor, tabuada, resultado
+    let nome
+    
+    //Entrada de dados
+    //Solicitando para o usuario o nome
+    nome = String(window.prompt("Digite seu nome: "))
+
+    //Solicitando o valor que será multiplicado
+    tabuada = Number(window.prompt("Digite a tabuada de 1 a 10: "))
+
+    //Solicitando o valor da tabuada
+    valor = Number(window.prompt("Digite o valor: "))
+    
+    if(tabuada >= 10  || tabuada < 1){
+        alert("Opção invalida!!, nossos parametros é entre 1 e 10 ;)")
+    }
+    else{
+        let tabela = '<table border="1" style="border-collapse: collapse; margin-top: 20px;">';
+        tabela += '<tr><th>Tabuada de ' + tabuada + '</th><th>Resultado</th></tr>';
+        
+        // Gerar e exibir os resultados da tabuada
+        for (valor = 1; valor <= 10; valor++) {
+            resultado = tabuada * valor;
+            tabela += '<tr><td>' + tabuada + ' x ' + i + '</td><td>' + resultado + '</td></tr>';
+        }
+
+        tabela += '</table>';
+
+        // Exibe a tabela na página
+        document.body.innerHTML += tabela;
+}
+}
+tabuada();
